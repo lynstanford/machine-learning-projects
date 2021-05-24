@@ -1,2 +1,2 @@
 # machine-learning
-Deep Learning and TensorFlow Neural Networks for practice
+A variety of Machine Learning and Deep Learning models for my web site portfolio using SciKit Learn, PyTorch, TensorFlow and Keras.
