@@ -1,24 +1,25 @@
-% Define variable y as a vector
-y = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+% Define variable x as a vector
+x = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 % Based on a differentiable function (no vertical tangents)
-y = (x + 5)^2;
+y = (x + 5).^2
+y
 
 % Step 1 - Let's start from a 'random point', choosing any value within the dataset above
-% x = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+% x = -3;
 
 % Find y:
 % x = sqrt(y - 5);
-for i in y():
-    x = sqrt(y - 5)
-fprintf(x)
+for x in x():
+    y = (x + 5).^2
+x
 
 % Plot the data variables
-plot(x, y, 'r*');
-axis([-10 10 -10 10]);
-xlabel("time");
-ylabel("price");
-title("price over time");
+plot(x, y, 'r*')
+axis([-10 10 0 150])
+xlabel("time")
+ylabel("price")
+title("price over time")
 
 % Then find the gradient of the function, or 1st order derivative w.r.t. the function
 diff(y) / diff(x) = 2 * (x + 5);
@@ -31,6 +32,7 @@ learning_rate = 0.01;
 % i) Initialize Parameters:
 x0 = -3;
 dy/dx = 2*(x+5);
+gradient = dy/dx;
 gradient = diff(y)/diff(x);
 learning_rate = 0.01;
 
