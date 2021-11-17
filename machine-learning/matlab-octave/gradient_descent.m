@@ -23,6 +23,7 @@ title("price over time")
 
 % Then find the gradient of the function, or 1st order derivative w.r.t. the function
 diff(y) / diff(x) = 2 * (x + 5);
+gradient = diff(y) / diff(x);
 
 % Step 2 - Move in the direction of the negative of the gradient (Descent)
 % But how much do we move by? For that, we define a learning rate.
