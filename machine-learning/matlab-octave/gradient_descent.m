@@ -50,4 +50,3 @@ x2;
 % A better way to represent this
 x_new = x+=1;
 x_new = x - learning_rate * gradient;
-
