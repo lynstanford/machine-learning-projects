@@ -21,7 +21,7 @@ dy / dx = f'(x)
 # 2. Move in the direction opposite to the gradient
 # Opposite direction of the slope increase from current point by alpha times the gradient at that point
 
-# Iterative Gradient Descent
+# Iterative Gradient Descent from Machine Learning by Stanford Online
 function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
 %GRADIENTDESCENTMULTI Performs gradient descent to learn theta
 %   theta = GRADIENTDESCENTMULTI(x, y, theta, alpha, num_iters) updates theta by
