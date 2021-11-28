@@ -11,7 +11,7 @@ h_theta(x) = theta0 + theta1(x)
 # Parameters:
 theta0, theta1
 # Cost Function:
-J(theta0,theta1) = (1 / 2*m) * sum(h_theta(x(i) - y(i)))^2
+J(theta0,theta1) = (1 / 2*m) * sum(h_theta(x - y))^2
 # Goal:
 min(J(theta0,theta1))
 
@@ -20,6 +20,8 @@ dy / dx = f'(x)
 
 # 2. Move in the direction opposite to the gradient
 # Opposite direction of the slope increase from current point by alpha times the gradient at that point
+# The Gradient Descent Algorithm must be repeated until convergence on the local/global minimum
+
 
 # Iterative Gradient Descent from Machine Learning by Stanford Online
 function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
@@ -59,3 +61,4 @@ for iter = 1:num_iters
 end
 
 end
+
