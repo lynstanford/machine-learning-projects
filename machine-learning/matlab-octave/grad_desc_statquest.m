@@ -12,5 +12,9 @@ y = predicted value;
 m = slope, y / x = 0.64;
 x = actual value, 0.5;
 b = intercept, 0;
-y_predicted = 0 + 0.64 * 0.5
-y_predicted = 0.32
+y_predicted = 0 + 0.64 * 0.5;
+# given a value of x = 0.5
+y_predicted = 0.32;
+# now calculate the residual
+residual = 1.4 - 0.32;
+(residual)^2 = (1.4 - 0.32)^2;
