@@ -3,5 +3,6 @@ A variety of Machine Learning and Deep Learning models for my web site portfolio
 
 [![Board Status](https://dev.azure.com/lynstanford/d3b5097c-3446-4022-bfca-3cee97f230e5/c476ec00-3912-49b2-9020-080bb67dd15a/_apis/work/boardbadge/8bb491d1-28d5-43a6-aa0d-676200cf2e74?columnOptions=1)](https://dev.azure.com/lynstanford/d3b5097c-3446-4022-bfca-3cee97f230e5/_boards/board/t/c476ec00-3912-49b2-9020-080bb67dd15a/Microsoft.RequirementCategory/)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lynstanford/machine-learning-projects/blob/main/machine-learning/random_forest.ipynb/main)
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/lynstanford/machine-learning-projects/blob/master/machine-learning/random_forest.ipynb/master
 
