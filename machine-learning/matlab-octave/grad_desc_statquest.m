@@ -18,3 +18,5 @@ y_predicted = 0.32;
 # now calculate the residual
 residual = 1.4 - 0.32;
 (residual)^2 = (1.4 - 0.32)^2;
+
+
