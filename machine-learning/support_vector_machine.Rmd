@@ -1,0 +1,72 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+install.packages("tidyverse")
+install.packages("dplyr")
+```
+
+```{r}
+iris.uci <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header=FALSE)
+```
+
+```{r}
+colnames(iris.uci) <- c("sepal.length","sepal.width","petal.length","petal.width","species")
+```
+
+```{r}
+iris.uci <- read.csv("clipboard", header=FALSE, col.names = 
+                       c("sepal.length","sepal.width","petal.length","petal.width","species"))
+```
+
+```{r}
+head(iris.uci)
+```
+
+```{r}
+# to eliminate unnecessary entries in or names in the title of your features:
+library(dplyr)
+iris.uci$species <- mapvalues(iris.uci$species, from = 
+                                c("Iris-setosa","Iris-versicolor","Iris-virginica"), to = c("setosa","versicolor","virginica"))
+```
+
+```{r}
+# how to plot the frequency distributions
+par(mfrow=c(2,2))
+for(i in 1:4){hist(iris.uci[,i], xlab=colnames(iris.uci[i]), cex.lab=1.2, main="")}
+```
+
+```{r}
+par(mfcol=c(2,2))
+```
+
+```{r}
+pairs(iris.uci,lower.panel=NULL, cex=2, pch=21, cex.labels = 2, bg = c("black","grey","white")[iris.uci$species])
+```
+
+```{r}
+set.vers <- subset(iris, Species != "virginica")
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(set.vers, aes(x=Petal.Length,y=Petal.Width,color=Species)) + geom_point(size=4) + scale_color_manual(values = c("black","white")) + geom_point(shape=1,size=4,color="black") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+```
+
+```{r}
+vers.virg <- subset(iris, Species != "setosa")
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
