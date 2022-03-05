@@ -1,4 +1,4 @@
-name: my-binder
+name: machine-learning-projects
 channels:
   - conda-forge
 dependencies:
