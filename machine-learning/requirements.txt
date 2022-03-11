@@ -1,9 +1,9 @@
 wget==3.2
-pandas==1.2.4
-numpy==1.19.2
-watermark==2.2.0
+pandas==1.4.1
+numpy==1.21.5
+watermark==2.3.0
 tarfile==0.9.0
-urllib3==1.26.6
-matplotlib==3.3.4
-seaborn==0.11.1
-sklearn==0.24.2
+urllib3==1.26.8
+matplotlib==3.5.1
+seaborn==0.11.2
+sklearn==1.0.2
