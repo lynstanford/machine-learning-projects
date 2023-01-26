@@ -8,9 +8,9 @@ c = conn.cursor()
 
 # create a Table
 c.execute("""CREATE TABLE customers(
-        first_name DATATYPE,
-        last_name DATATYPE,
-        email DATATYPE
+        first_name TEXT,
+        last_name TEXT,
+        email TEXT
 )""")
 
 # NULL
@@ -19,3 +19,10 @@ c.execute("""CREATE TABLE customers(
 # TEXT
 # BLOB
 
+# commit our connection command
+conn.commit()
+
+# close our connection
+conn.close()
+
+# save this file and run it in the bash
