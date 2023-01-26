@@ -19,6 +19,11 @@ c.execute("""CREATE TABLE customers(
 # TEXT
 # BLOB
 
+# Insert one record into the table
+
+c.execute("INSERT INTO customers VALUES ('John', 'Elder', 'john@codemy.com')")
+print("Command executed successfully...")
+
 # commit our connection command
 conn.commit()
 
