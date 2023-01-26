@@ -69,7 +69,8 @@ conn.commit()
 # close our connection
 conn.close()
 
-# Query and Fetchall
+# Save and Run!
+
 import sqlite3
 # connect to a database
 conn = sqlite3.connect('customers.db')
@@ -85,4 +86,65 @@ print(c.fetchone())
 conn.commit()
 # close our connection
 conn.close()
+
+# Save and Run!
+
+import sqlite3
+# connect to a database
+conn = sqlite3.connect('customers.db')
+# create a cursor
+c = conn.cursor()
+# query the database
+c.execute("SELECT * FROM customers")
+print(c.fetchone()[0])
+# print(c.fetchmany(3))
+# print(c.fetchall())
+# print("Command executed successfully...")
+# commit our command
+conn.commit()
+# close our connection
+conn.close()
+
+# Save and Run!
+
+import sqlite3
+# connect to a database
+conn = sqlite3.connect('customers.db')
+# create a cursor
+c = conn.cursor()
+# query the database
+c.execute("SELECT * FROM customers")
+# print(c.fetchone()[0])
+# print(c.fetchmany(3))
+items = c.fetchall()
+print(items)
+# print("Command executed successfully...")
+# commit our command
+conn.commit()
+# close our connection
+conn.close()
+
+# Save and Run!
+# Alternatively, you could create a loop:
+
+import sqlite3
+# connect to a database
+conn = sqlite3.connect('customers.db')
+# create a cursor
+c = conn.cursor()
+# query the database
+c.execute("SELECT * FROM customers")
+# print(c.fetchone()[0])
+# print(c.fetchmany(3))
+items = c.fetchall()
+for item in items:
+    print(item)
+# print("Command executed successfully...")
+# commit our command
+conn.commit()
+# close our connection
+conn.close()
+
+# Save and Run!
+# This should output a Tuple, but the data is slowly becoming more readable now. Suppose we just wanted to print out element zero inside the Tuple.
 
