@@ -31,3 +31,58 @@ conn.commit()
 conn.close()
 
 # save this file and run it in the bash
+
+# add another entry to our database:
+c.execute("INSERT INTO customers VALUES ('Tim', 'Smith', 'tim@codemy.com')")
+# commit our connection command
+conn.commit()
+# close our connection
+conn.close()
+
+# insert many records into the table
+many_customers = [
+                    ('Wes','Brown','wes@brown.com'),
+                    ('Steph','Kuewa','steph@kuewa.com'),
+                    ('Dan','Pas','dan@pas.com')
+                ]
+
+c.executemany("INSERT INTO customers VALUES (?,?,?)", many_customers)
+# commit our connection command
+conn.commit()
+# close our connection
+conn.close()
+
+# Query and Fetchall
+import sqlite3
+# connect to a database
+conn = sqlite3.connect('customers.db')
+# create a cursor
+c = conn.cursor()
+# query the database
+c.execute("SELECT * FROM customers")
+# print(c.fetchone())
+# print(c.fetchmany(3))
+print(c.fetchall())
+# print("Command executed successfully...")
+# commit our command
+conn.commit()
+# close our connection
+conn.close()
+
+# Query and Fetchall
+import sqlite3
+# connect to a database
+conn = sqlite3.connect('customers.db')
+# create a cursor
+c = conn.cursor()
+# query the database
+c.execute("SELECT * FROM customers")
+print(c.fetchone())
+# print(c.fetchmany(3))
+# print(c.fetchall())
+# print("Command executed successfully...")
+# commit our command
+conn.commit()
+# close our connection
+conn.close()
+
