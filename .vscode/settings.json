@@ -12,12 +12,6 @@
             "driver": "SQLite",
             "database": "./sqlite/test_db.db",
             "connectionTimeout": 15
-        },
-        {
-            "previewLimit": 50,
-            "driver": "SQLite",
-            "name": "sqlite-test",
-            "database": "C:\\Users\\lynst\\Documents\\SQL\\SQLite\\california_environment.db"
         }
     ]
 }
