@@ -10,7 +10,7 @@
         {
             "name": "SQLite",
             "driver": "SQLite",
-            "database": "./sqlite/test_db.db",
+            "database": "./sqlite/test.db",
             "connectionTimeout": 15
         }
     ],
