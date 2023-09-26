@@ -29,8 +29,8 @@
             "ui_data": {
               "label": "Cleaned.ipynb",
               "image": "/static/elyra/notebook.svg",
-              "x_pos": 381,
-              "y_pos": 226,
+              "x_pos": 383,
+              "y_pos": 227,
               "description": "Run notebook file",
               "decorations": [
                 {
