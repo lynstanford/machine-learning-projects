@@ -9,3 +9,6 @@ db_name = 'Movies.db'
 
 table_name = 'Top_25'
 
+# set the filepath for the CSV extract file
+csv_path = 'C:/Users/lynst/Documents/GitHub/machine-learning-projects/data-engineering/web-scraping/top_25_films.csv'
+
